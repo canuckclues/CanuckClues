@@ -82,17 +82,21 @@ body {
     display: flex;
     gap: 2rem;
     align-items: center;
+    flex: 1;
 }
 
 .nav-center {
-    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nav-right {
     display: flex;
     gap: 2rem;
     align-items: center;
-    margin-left: auto;
+    justify-content: flex-end;
+    flex: 1;
 }
 
 .logo {
