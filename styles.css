@@ -69,28 +69,30 @@ body {
 }
 
 .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    gap: 2rem;
+    padding: 0 20px;
 }
 
 .nav-left {
     display: flex;
     gap: 2rem;
-    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-center {
+    text-align: center;
 }
 
 .nav-right {
     display: flex;
     gap: 2rem;
-    justify-content: flex-end;
-}
-
-.nav-center {
-    text-align: center;
+    align-items: center;
+    margin-left: auto;
 }
 
 .logo {
