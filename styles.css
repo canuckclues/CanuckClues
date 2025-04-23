@@ -1,14 +1,14 @@
 /* Font Declarations */
 @font-face {
     font-family: '1942';
-    src: url('./fonts/1942.ttf') format('truetype');
+    src: url('/CanuckClues/fonts/1942.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Special Elite';
-    src: url('./fonts/SpecialElite.ttf') format('truetype');
+    src: url('/CanuckClues/fonts/SpecialElite.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -106,7 +106,7 @@ body {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(91, 62, 140, 0.8), rgba(91, 62, 140, 0.8)),
-                url('./images/party.webp');
+                url('/CanuckClues/images/party.webp');
     background-size: cover;
     background-position: center;
     display: flex;
