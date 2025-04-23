@@ -77,9 +77,16 @@ body {
     gap: 2rem;
 }
 
-.nav-left, .nav-right {
+.nav-left {
     display: flex;
     gap: 2rem;
+    justify-content: flex-start;
+}
+
+.nav-right {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
 }
 
 .nav-center {
