@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision - Escape from the 6</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="announcement-bar">
+        AT-HOME ESCAPE ROOM | PROUDLY CANADIAN
+    </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#about">About Us</a>
+                <a href="puzzles.html">The Spoiler Room</a>
+            </div>
+            <div class="nav-center">
+                <a href="index.html" class="logo">Escape from the 6</a>
+            </div>
+            <div class="nav-right">
+                <a href="#contact">Contact</a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <section class="decision-page">
+        <div class="decision-container">
+            <div class="decision-content">
+                <h1>What Will You Do?</h1>
+                <p>You've uncovered a massive scandal involving two esteemed community members. Now you must decide your next move.</p>
+                
+                <div class="decision-options">
+                    <div class="decision-card report">
+                        <h2>Report to Your Boss</h2>
+                        <p>Do the right thing and report your findings to your superior. This could lead to justice being served, but at what cost?</p>
+                        <a href="report.html" class="decision-button">
+                            <i class="fas fa-file-alt"></i>
+                            Report Findings
+                        </a>
+                    </div>
+
+                    <div class="decision-card blackmail">
+                        <h2>Attempt Blackmail</h2>
+                        <p>Use your knowledge for personal gain. This could be dangerous, but the potential rewards are significant.</p>
+                        <a href="blackmail.html" class="decision-button">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            Attempt Blackmail
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Canuck Clues. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function makeDecision(choice) {
+            if (choice === 'report') {
+                alert('You chose to report the findings to your boss. The truth will come out, but at what cost to your career?');
+                // Add any additional consequences or redirects here
+            } else {
+                alert('You chose to attempt blackmail. This is a dangerous game you\'re playing...');
+                // Add any additional consequences or redirects here
+            }
+        }
+    </script>
+</body>
+</html> 

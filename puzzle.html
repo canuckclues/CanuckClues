@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle - Escape from the 6 | Canuck Clues</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="announcement-bar">
+        AT-HOME ESCAPE ROOM | PROUDLY CANADIAN
+    </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#about">About Us</a>
+                <a href="puzzles.html">The Spoiler Room</a>
+            </div>
+            <div class="nav-center">
+                <a href="index.html" class="logo">Canuck Clues</a>
+            </div>
+            <div class="nav-right">
+                <a href="#contact">Contact</a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <div class="puzzle-page">
+        <div class="puzzle-container">
+            <a href="puzzles.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <div class="puzzle-header">
+                <h1>Puzzle</h1>
+            </div>
+            <div class="puzzle-content">
+                <div class="code-input-section">
+                    <h2>Enter Code</h2>
+                    <div class="input-form">
+                        <div class="form-group">
+                            <input type="text" id="code-input" placeholder="Enter the code you found">
+                        </div>
+                        <button onclick="submitCode()" class="submit-button">Submit Code</button>
+                    </div>
+                </div>
+                <div class="hints-section">
+                    <h2>Hints</h2>
+                    <div class="hints-container">
+                        <button onclick="toggleHint(1)" class="hint-button">
+                            <i class="fas fa-lightbulb"></i>
+                            Hint 1
+                        </button>
+                        <button onclick="toggleHint(2)" class="hint-button">
+                            <i class="fas fa-lightbulb"></i>
+                            Hint 2
+                        </button>
+                        <button onclick="toggleHint(3)" class="hint-button">
+                            <i class="fas fa-lightbulb"></i>
+                            Hint 3
+                        </button>
+                    </div>
+                    <div id="hint-1" class="hint-text"></div>
+                    <div id="hint-2" class="hint-text"></div>
+                    <div id="hint-3" class="hint-text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Canuck Clues. All rights reserved.</p>
+    </footer>
+
+    <script src="puzzle.js"></script>
+</body>
+</html> 

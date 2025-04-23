@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Puzzles - Escape from the 6</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="announcement-bar">
+        AT-HOME ESCAPE ROOM | PROUDLY CANADIAN
+    </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#about">About Us</a>
+                <a href="puzzles.html">The Spoiler Room</a>
+            </div>
+            <div class="nav-center">
+                <a href="index.html" class="logo">Escape from the 6</a>
+            </div>
+            <div class="nav-right">
+                <a href="#contact">Contact</a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <div class="puzzle-page">
+        <div class="puzzles-container">
+            <div class="spoiler-room">
+                <div class="spoiler-container">
+                    <div id="password-section" class="password-section" style="display: none;">
+                        <h2>The Spoiler Room</h2>
+                        <p>Enter the password to access puzzle solutions and hints.</p>
+                        <div class="password-form">
+                            <input type="password" id="password-input" placeholder="Enter password">
+                            <button onclick="checkPassword()" class="submit-button">Enter</button>
+                        </div>
+                    </div>
+
+                    <div id="puzzles-section" class="puzzles-section">
+                        <h2>Your Puzzles</h2>
+                        <p>Enter the codes you've found to track your progress.</p>
+                        <div class="puzzle-grid">
+                            <a href="puzzle.html?puzzle=1" class="puzzle-card" data-puzzle="1">
+                                <h3>North York Dentist</h3>
+                                <div class="puzzle-status">
+                                    <i class="fas fa-lock"></i>
+                                    <span>Locked</span>
+                                </div>
+                            </a>
+                            <a href="puzzle.html?puzzle=2" class="puzzle-card" data-puzzle="2">
+                                <h3>Magic Cinema</h3>
+                                <div class="puzzle-status">
+                                    <i class="fas fa-lock"></i>
+                                    <span>Locked</span>
+                                </div>
+                            </a>
+                            <a href="puzzle.html?puzzle=3" class="puzzle-card" data-puzzle="3">
+                                <h3>The Annex Speech Therapy</h3>
+                                <div class="puzzle-status">
+                                    <i class="fas fa-lock"></i>
+                                    <span>Locked</span>
+                                </div>
+                            </a>
+                            <a href="puzzle.html?puzzle=4" class="puzzle-card" data-puzzle="4">
+                                <h3>Builder Depot Receipt</h3>
+                                <div class="puzzle-status">
+                                    <i class="fas fa-lock"></i>
+                                    <span>Locked</span>
+                                </div>
+                            </a>
+                            <a href="puzzle.html?puzzle=5" class="puzzle-card" data-puzzle="5">
+                                <h3>The Etobicoke Handyman</h3>
+                                <div class="puzzle-status">
+                                    <i class="fas fa-lock"></i>
+                                    <span>Locked</span>
+                                </div>
+                            </a>
+                            <a href="puzzle.html?puzzle=6" class="puzzle-card" data-puzzle="6">
+                                <h3>ClearFlow Report</h3>
+                                <div class="puzzle-status">
+                                    <i class="fas fa-lock"></i>
+                                    <span>Locked</span>
+                                </div>
+                            </a>
+                            <a href="puzzle.html?puzzle=7" class="puzzle-card" data-puzzle="7">
+                                <h3>The Toronto Herald</h3>
+                                <div class="puzzle-status">
+                                    <i class="fas fa-lock"></i>
+                                    <span>Locked</span>
+                                </div>
+                            </a>
+                            <a href="puzzle.html?puzzle=8" class="puzzle-card" data-puzzle="8">
+                                <h3>Contango Cosmetics</h3>
+                                <div class="puzzle-status">
+                                    <i class="fas fa-lock"></i>
+                                    <span>Locked</span>
+                                </div>
+                            </a>
+                            <a href="puzzle.html?puzzle=9" class="puzzle-card" data-puzzle="9">
+                                <h3>Suzy's Snack Shop</h3>
+                                <div class="puzzle-status">
+                                    <i class="fas fa-lock"></i>
+                                    <span>Locked</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="reveal-section" class="reveal-section" style="display: none;">
+                            <h2>Unlock the Final Reveal</h2>
+                            <p>You've solved all the puzzles. Are you ready to discover the truth?</p>
+                            <a href="reveal.html" class="reveal-button">
+                                <i class="fas fa-unlock"></i>
+                                See the Reveal
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Canuck Clues. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Check if password has been entered before
+        function checkPasswordState() {
+            const hasEnteredPassword = localStorage.getItem('spoiler_room_unlocked') === 'true';
+            if (hasEnteredPassword) {
+                document.getElementById('password-section').style.display = 'none';
+                document.getElementById('puzzles-section').style.display = 'block';
+                // Initialize puzzle statuses when showing puzzles section
+                initializePuzzleStatuses();
+            } else {
+                document.getElementById('password-section').style.display = 'block';
+                document.getElementById('puzzles-section').style.display = 'none';
+            }
+        }
+
+        function checkPassword() {
+            const password = document.getElementById('password-input').value;
+            if (password === 'CLEARFLOW') {
+                localStorage.setItem('spoiler_room_unlocked', 'true');
+                document.getElementById('password-section').style.display = 'none';
+                document.getElementById('puzzles-section').style.display = 'block';
+                // Initialize puzzle statuses after password is entered
+                initializePuzzleStatuses();
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+
+        // Function to initialize puzzle statuses
+        function initializePuzzleStatuses() {
+            for (let i = 1; i <= 9; i++) {
+                const isUnlocked = localStorage.getItem(`puzzle_${i}_unlocked`) === 'true';
+                const puzzleCard = document.querySelector(`.puzzle-card[data-puzzle="${i}"]`);
+                if (puzzleCard && isUnlocked) {
+                    puzzleCard.classList.add('solved');
+                    puzzleCard.querySelector('.puzzle-status').innerHTML = `
+                        <i class="fas fa-lock-open"></i>
+                        <span>Unlocked</span>
+                    `;
+                }
+            }
+        }
+
+        // Allow Enter key to submit password
+        document.getElementById('password-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+
+        // Function to check if all puzzles are unlocked
+        function checkAllPuzzlesUnlocked() {
+            for (let i = 1; i <= 9; i++) {
+                if (localStorage.getItem(`puzzle_${i}_unlocked`) !== 'true') {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // Function to update reveal section visibility
+        function updateRevealSection() {
+            const revealSection = document.getElementById('reveal-section');
+            if (revealSection) {
+                revealSection.style.display = checkAllPuzzlesUnlocked() ? 'block' : 'none';
+            }
+        }
+
+        // Check password state when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            checkPasswordState();
+            updateRevealSection();
+        });
+    </script>
+</body>
+</html> 

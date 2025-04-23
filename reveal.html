@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reveal - Escape from the 6</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="announcement-bar">
+        AT-HOME ESCAPE ROOM | PROUDLY CANADIAN
+    </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#about">About Us</a>
+                <a href="puzzles.html">The Spoiler Room</a>
+            </div>
+            <div class="nav-center">
+                <a href="index.html" class="logo">Canuck Clues</a>
+            </div>
+            <div class="nav-right">
+                <a href="#contact">Contact</a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <section class="reveal-page">
+        <div class="reveal-container">
+            <div class="reveal-content">
+                <h1>The Final Reveal</h1>
+                <p>Your detective work led you to investigate the messaging apps of various community members. You discovered the following exchange:</p>
+                
+                <div class="text-exchange">
+                    <div class="message received">
+                        <div class="message-content">
+                            <div class="sender">Claire Cook</div>
+                            <p>Someone from the water testing company saw me leaving from our dump site. But I got away.</p>
+                            <span class="time">10:15 PM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="message sent">
+                        <div class="message-content">
+                            <div class="sender">Sophia Langley</div>
+                            <p>Thank goodness. And you got the acid into the water?</p>
+                            <span class="time">10:16 PM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="message received">
+                        <div class="message-content">
+                            <div class="sender">Claire Cook</div>
+                            <p>Yup. We've hit all the main lines. Small additives, barely traceable. Nothing lethal... just enough.</p>
+                            <span class="time">10:17 PM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="message sent">
+                        <div class="message-content">
+                            <div class="sender">Sophia Langley</div>
+                            <p>Great. I ran the projections and if we can increase dermatological complaints by even 5%, we're looking at a 53% revenue spike next year.</p>
+                            <span class="time">10:18 PM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="message received">
+                        <div class="message-content">
+                            <div class="sender">Claire Cook</div>
+                            <p>Same on my end. Cavities, sensitivity, gum recession. People will be lining up outside my office.</p>
+                            <span class="time">10:19 PM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="message sent">
+                        <div class="message-content">
+                            <div class="sender">Sophia Langley</div>
+                            <p>Nice. I finished fudging the paperwork at the makeup factory, they won't even notice the missing barrel of hydochloric acid! No one will ever know it was us.</p>
+                            <span class="time">10:20 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="decision-section">
+                    <h2>Ready to Make Your Choice?</h2>
+                    <p>When you're ready, click below to choose your next move.</p>
+                    <a href="decision.html" class="decision-button">
+                        <i class="fas fa-arrow-right"></i>
+                        Make Your Choice
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Canuck Clues. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Check if all puzzles are unlocked
+        function checkPuzzleStatus() {
+            let allUnlocked = true;
+            for (let i = 1; i <= 9; i++) {
+                if (localStorage.getItem(`puzzle_${i}_unlocked`) !== 'true') {
+                    allUnlocked = false;
+                    break;
+                }
+            }
+            
+            if (!allUnlocked) {
+                window.location.href = 'puzzles.html';
+            }
+        }
+
+        // Check puzzle status when page loads
+        document.addEventListener('DOMContentLoaded', checkPuzzleStatus);
+    </script>
+</body>
+</html> 
