@@ -1332,12 +1332,18 @@ footer {
     color: #fff;
 }
 
+.reveal-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
 .reveal-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
-    background: var(--accent-color);
+    background: var(--primary-color);
     color: white;
     padding: 1.2rem 2.5rem;
     border-radius: 8px;
@@ -1346,13 +1352,12 @@ footer {
     transition: all 0.3s ease;
     border: 2px solid transparent;
     font-family: var(--body-font);
-    margin: 0 auto;
 }
 
 .reveal-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
-    border-color: rgba(255, 255, 255, 0.2);
+    background: var(--secondary-color);
+    box-shadow: 0 8px 20px rgba(91, 62, 140, 0.3);
 }
 
 .reveal-button i {
