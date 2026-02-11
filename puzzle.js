@@ -2,11 +2,11 @@
 const puzzleData = {
     1: {
         title: "North York Dentist",
-        correctCode: "92",
+        correctCode: "58",
         hints: [
-            "There appears to be arrows on the business card",
-            "The pattern on the business card appears to match the pattern on the pamphlet",
-            "The code is 92"
+            "There appears to be a desgin on the business card",
+            "The braces design on the business card shows two missing brackets",
+            "The code is 58"
         ]
     },
     2: {
@@ -65,11 +65,11 @@ const puzzleData = {
     },
     8: {
         title: "Contango Cosmetics",
-        correctCode: "23",
+        correctCode: "39",
         hints: [
-            "The sales zones can be traced to form shapes",
-            "The sales zone correlate with those shown in the ads",
-            "The code is 23"
+            "The sales zones can be traced to find areas of overlap. Overlapping regions can be tallied using corresponding slaes index numbers",
+            "The compasss indicates a mathematical operation to be performed on West and East overlapping zones",
+            "The code is 39"
         ]
     },
     9: {
